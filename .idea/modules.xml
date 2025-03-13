@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/go-basics.iml" filepath="$PROJECT_DIR$/go-basics.iml" />
       <module fileurl="file://$PROJECT_DIR$/go-quickstarter.iml" filepath="$PROJECT_DIR$/go-quickstarter.iml" />
       <module fileurl="file://$PROJECT_DIR$/go-rest.iml" filepath="$PROJECT_DIR$/go-rest.iml" />
     </modules>

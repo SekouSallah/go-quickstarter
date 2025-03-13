@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go-quickstarter/foods"
-	"go-quickstarter/messages"
+	"go-basics/foods"
+	"go-basics/messages"
 	"strings"
 )
 
