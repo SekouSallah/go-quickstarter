@@ -2,29 +2,28 @@ package main
 
 import (
 	"fmt"
+	"go-quickstarter/foods"
+	"go-quickstarter/messages"
+	"strings"
 )
 
-//TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
-
 func main() {
-	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
-	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
-	s := "gopher"
-	fmt.Printf("Hello and welcome, %s!\n", s)
 
-	for i := 1; i <= 5; i++ {
-		//TIP <p>To start your debugging session, right-click your code in the editor and select the Debug option.</p> <p>We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-		// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
+	fmt.Println(strings.ToUpper(DisplayCustomMessage("Sow", "Go's very faster")))
 
-		fmt.Println("i =", 100/i)
+	fmt.Println(messages.DisplayCustomMessage("Venkat", "I love Golang!"))
+
+	order, err := foods.FoodOrder(-3, "Pizzas")
+
+	if err != nil {
+		fmt.Println("Veuillez vérifier les quantités demandées", err)
 	}
 
-	fmt.Println("****************************************************")
+	fmt.Println(order)
 
-	DisplayMessage()
 }
 
-func DisplayMessage() {
-	fmt.Println("Hello World!")
+func DisplayCustomMessage(author, message string) string {
+
+	return fmt.Sprintf("%v : %v", author, message)
 }
